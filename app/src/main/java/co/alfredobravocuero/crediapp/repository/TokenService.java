@@ -20,7 +20,7 @@ public class TokenService {
 
     private static final String TAG = TokenService.class.getName();
 
-    public void getToken(final String user, final ITokenResponse tokenResponse) {
+    public void getToken(final String user, final String password, final ITokenResponse tokenResponse) {
 
         try {
 
@@ -34,7 +34,7 @@ public class TokenService {
                     ServiceResponse<TokenResponse> respLogin = response.body();
 
                     if (respLogin.isSuccess()) {
-                        String accessKey = Utilities.md5(respLogin.getResult().getToken() + Constantes.ACCESS_KEY);
+                        String accessKey = Utilities.md5(respLogin.getResult().getToken() + password);
                         tokenResponse.getToken(accessKey);
                         return;
                     }

@@ -32,7 +32,7 @@ public class LoginService {
         try {
 
             TokenService tokenService = new TokenService();
-            tokenService.getToken(user, new ITokenResponse() {
+            tokenService.getToken(user, password, new ITokenResponse() {
                 @Override
                 public void getToken(String token) {
 
