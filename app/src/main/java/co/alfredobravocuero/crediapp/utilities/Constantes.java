@@ -6,7 +6,7 @@ package co.alfredobravocuero.crediapp.utilities;
 
 public class Constantes {
 
-    public static final String URL_BASE = "https://crm.novation.com.co/";
+    public static final String URL_BASE = "http://novation.vtiger.com.co/";
 
     public static final String OPERATION_LOGIN = "webservice.php?operation=login";
 }

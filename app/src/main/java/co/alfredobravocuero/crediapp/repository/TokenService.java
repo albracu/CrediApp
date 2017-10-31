@@ -35,6 +35,7 @@ public class TokenService {
 
                     if (respLogin.isSuccess()) {
                         String accessKey = Utilities.md5(respLogin.getResult().getToken() + password);
+                        Log.i("TOKENnnnnnnnn", accessKey);
                         tokenResponse.getToken(accessKey);
                         return;
                     }
